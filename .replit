@@ -1,0 +1,13 @@
+modules = ["python-3.12"]
+run = "python wall_detector.py"
+
+[nix]
+channel = "stable-24_05"
+packages = ["glibcLocales", "libGL", "libGLU"]
+
+[deployment]
+run = ["sh", "-c", "python wall_detector.py"]
+
+[[ports]]
+localPort = 3000
+externalPort = 80
